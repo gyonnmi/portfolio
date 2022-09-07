@@ -14,6 +14,7 @@
   --color-yellow: #fff7d1;
   --color-orange: #E88B4A;
   --color-black: #000000;
+  --color-purple: #bdbdf7;
 
   /* Font size */
   --font-large: 48px;
@@ -120,6 +121,39 @@ header .logo a {
   text-align: center;
   color: var(--color-white);
 }
+.home .img-3d {
+  position: relative;
+  height: 450px;
+  perspective: 600px;
+}
+.home .img-3d .front img,
+.home .img-3d .back img{
+  backface-visibility: hidden;
+  transition: 1s;
+}
+.home .img-3d .front img {
+  width: 250px;
+  border-radius: 30%;
+  border: 2px solid var(--color-pink);
+  margin: 50px 0 20px 0;
+  position: absolute;
+  transform: rotateY(0deg);
+  left: 50%;
+  margin-left: -125px;
+
+}
+.home .img-3d:hover .front img {
+  transform: rotateY(180deg);
+}
+.home .img-3d .back img {
+  width: 400px;
+  height: 300px;
+  transform: rotateY(-180deg);
+  margin: 55px 0 20px 0;
+}
+.home .img-3d:hover .back img {
+  transform: rotateY(0deg);
+}
 .home h1 {
   letter-spacing: 2px;
 }
@@ -127,12 +161,6 @@ header .logo a {
   letter-spacing: 2px;
   font-size: var(--font-medium);
   margin: 10px 0;
-}
-.home img {
-  width: 250px;
-  border-radius: 30%;
-  border: 2px solid var(--color-pink);
-  margin: 50px 0 20px 0;
 }
 .home button {
   border-radius: var(--size-border-radius);
@@ -143,7 +171,7 @@ header .logo a {
   color: var(--color-white);
 }
 .home button:hover {
-  background-color: var(--color-blue);
+  background-color: var(--color-purple);
 }
 
 
