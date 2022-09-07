@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,30 +17,71 @@
 <body>
   <!-- Navbar -->
   <nav id="navbar">
-    <!-- About -->
-    <section id="about">
-      <div class="navbar__logo">
-        <a href="#">Kyungmi</a>
-      </div>
-      <div>
-        <ul class="navbar__menu">
-          <li class="navbar__menu__item">Home</li>
-          <li class="navbar__menu__item">About</li>
-          <li class="navbar__menu__item">Skills</li>
-          <li class="navbar__menu__item">My Work</li>
-          <li class="navbar__menu__item">Testimonial</li>
-          <li class="navbar__menu__item">Contact</li>
-        </ul>
-      </div>
-    </section>
-    <!-- Skils -->
-    <section id="skills"></section>
-    <!-- Work -->
-    <section id="work"></section>
-    <!-- Testimonials -->
-    <section id="testimonials"></section>
-    <!-- Contact -->
-    <section id="contact"></section>
+    <div class="navbar__logo">
+      <img src="./img/logo.png" alt="logo">
+      <a href="#">Kyungmi</a>
+    </div>
+    <div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item">Home</li>
+        <li class="navbar__menu__item">About</li>
+        <li class="navbar__menu__item">Skills</li>
+        <li class="navbar__menu__item">Projects</li>
+        <li class="navbar__menu__item">Contact</li>
+      </ul>
+    </div>
+
   </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <img src="./img/m2.jpeg" alt="">
+    <h1>안녕하세요! 성장하는 개발자 구경미 입니다⭐</h1>
+    <h2>Front-end Developer</h2>
+    <button class="home__contact">Contact</button>
+  </section>
+  <!-- About -->
+  <section id="about">
+    <h1>About me</h1>
+    <ul>
+      <li>
+        새로운 기술 스택에 관심이 많고 배우는 걸 좋아합니다.
+      </li>
+      <li>
+        React 개발 환경에 관심이 많고
+        이를 활용해 개발하는 것에 흥미를 느낍니다. 
+      </li>
+      <li>
+        더 좋은 협업에 대해 고민하고, 
+        더 좋은 코드 퀄리티를 위해 노력하고 있습니다.
+      </li>
+      <li>
+        팀을 위해 해야할 일을 스스로 찾고,
+        팀에게 도움이 되는 일을 할 때 뿌듯함을 느낍니다.
+      </li>
+    </ul>
+    <div class="about__majors">
+      <div class="major">
+        <div class="major__icon">
+          <i class="fa-brands fa-html5"></i>
+        </div>
+        <div class="major__title"></div>
+        <div class="major__description"></div>
+      </div>
+      <div class="major">
+        <div class="major__icon">
+          <i class="fa-solid fa-database"></i>
+        </div>
+        <div class="major__title"></div>
+        <div class="major__description"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Skils -->
+  <section id="skills"></section>
+  <!-- Projects -->
+  <section id="projects"></section>
+  <!-- Contact -->
+  <section id="contact"></section>
 </body>
 </html>
