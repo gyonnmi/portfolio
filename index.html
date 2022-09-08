@@ -28,7 +28,7 @@
         <a href="#">Kyungmi's Portfolio</a>
       </div>
       <div class="nav">
-        <ul>
+        <ul class="navbar">
           <li class="active">Home</li>
           <li>About</li>
           <li>Skills</li>
@@ -36,16 +36,22 @@
           <li>Contact</li>
         </ul>
       </div>
+
+      <button class="toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </header>
   
     <!-- Home -->
     <section class="home">
-      <div class="img-3d">
-        <div class="front">
-          <img src="./img/m3.JPG" alt="" />
-        </div>
-        <div class="back">
-          <img src="./img/logo.png" alt="" />
+      <div class="img-box">
+        <div class="img-3d">
+          <div class="front">
+            <img src="./img/m3.JPG" alt="" />
+          </div>
+          <div class="back">
+            <img src="./img/logo.png" alt="" />
+          </div>
         </div>
       </div>
       <h1>안녕하세요! 꾸준히 성장하는 개발자 구경미 입니다⭐</h1>
@@ -102,11 +108,106 @@
       </div>
     </div>
   </section>
+
   <!-- Skils -->
-  <section id="skills"></section>
+  <section class="skills">
+    <h1>Skills</h1>
+    <p>TEXT</p>
+    <div class="skill-box">
+      <div class="skill-left">
+        <h2 class="skill-title">Skills</h2>
+        <div class="skill">
+          <div class="skill-description">
+            <span>HTML</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-value" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-description">
+            <span>CSS</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-value" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-description">
+            <span>JavaScript</span>
+            <span>80%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-value" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-description">
+            <span>TypeScript</span>
+            <span>50%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-value" style="width: 50%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-description">
+            <span>React</span>
+            <span>60%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-value" style="width: 60%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-description">
+            <span>Vue.js</span>
+            <span>50%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-value" style="width: 50%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-description">
+            <span>Node.js</span>
+            <span>50%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-value" style="width: 50%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-right">
+        <div class="tools">
+          <h2 class="skill-title">Tools</h2>
+          <ul class="tools-list">
+            <li><span>Visual Studio Code</span></li>
+            <li><span>IntelliJ</span></li>
+            <li><span>Photoshop</span></li>
+          </ul>
+        </div>
+        <div class="etc">
+          <h2 class="skill-title">Etc</h2>
+          <ul class="etc-list">
+            <li><span>Git</span></li>
+            <li><span>SCSS</span></li>
+            <li><span>Bootstrap</span></li>
+            <li><span>Word</span></li>
+            <li><span>Powerpoint</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Projects -->
   <section id="projects"></section>
+
   <!-- Contact -->
   <section id="contact"></section>
+
 </body>
 </html>

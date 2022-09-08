@@ -6,7 +6,7 @@
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
   --color-pink: #F58DA6;
-  --color-dark-pink: #ff6863;
+  --color-dark-pink: #fd8f8b;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
@@ -85,6 +85,7 @@ header {
 }
 header .logo {
   display: flex;
+  min-width: 350px;
 }
 header .logo img {
   width: 80px;
@@ -115,11 +116,22 @@ header .logo a {
   background-color: var(--color-pink);
   border: 1px solid var(--color-white);
 }
+.toggle-btn {
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
 
 /* Home */
 .home {
   text-align: center;
   color: var(--color-white);
+}
+.home .img-box {
+  width: 400px;
+  margin: 0 auto;
 }
 .home .img-3d {
   position: relative;
@@ -198,7 +210,6 @@ header .logo a {
 .about-majors {
   display: flex;
   justify-content: space-between;
-  margin: 100px 200px;
 }
 .major {
   margin: 0 70px;
@@ -233,4 +244,87 @@ header .logo a {
 }
 .major-description {
   font-size: var(--font-small);
+}
+
+
+/* Skills */
+.skills {
+  height: 100vh;
+  border-top: 1px solid var(--color-pink);
+  background-color: var(--color-yellow);
+  text-align: center;
+  padding: 50px;
+}
+.skills h1 {
+  font-size: var(--font-large);
+  margin-bottom: 24px;
+  color: var(--color-dark-grey);
+}
+.skill-box {
+  display: flex;
+  margin-top: 50px;
+  color: var(--color-dark-grey);
+}
+.skill-left {
+  flex-basis: 60%;
+  background-color: #d0d0fd;
+  padding: 20px 40px;
+}
+.skill {
+  margin-bottom: 8px;
+}
+.skill-description {
+  display: flex;
+  justify-content: space-between;
+}
+.skill-bar {
+  width: 100%;
+  height: 3px;
+  background: var(--color-light-white);
+}
+.skill-bar .skill-value {
+  height: 3px;
+  background-color: var(--color-dark-pink);
+}
+.skill-right {
+  flex-basis: 40%;
+}
+.skill-right .tools,
+.skill-right .etc {
+  padding: 20px;
+}
+.skill-right .tools {
+  background-color: #ffbab8;
+}
+.skill-right .etc {
+  background-color: #b9dfff;
+}
+
+
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+    line-height: 110px;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    width: 100%;
+  }
+  .navbar.active {
+    display: block;
+  }
+  .nav ul {
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+  .home .img-box {
+    width: 300px;
+    height: 400px;
+  }
 }
