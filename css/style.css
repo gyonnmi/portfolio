@@ -72,7 +72,7 @@ button {
   background-image: url("/img/bg.png");
   background-size: cover;
   background-position-y: bottom;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 
@@ -135,7 +135,7 @@ header .logo a {
 }
 .home .img-3d {
   position: relative;
-  height: 450px;
+  height: 400px;
   perspective: 600px;
 }
 .home .img-3d .front img,
@@ -162,6 +162,9 @@ header .logo a {
   height: 300px;
   transform: rotateY(-180deg);
   margin: 55px 0 20px 0;
+  position: absolute;
+  left: 50%;
+  margin-left: -200px;
 }
 .home .img-3d:hover .back img {
   transform: rotateY(0deg);
@@ -179,7 +182,7 @@ header .logo a {
   font-size: var(--font-micro);
   border: 1px solid var(--color-white);
   padding: 8px 12px;
-  margin-top: 20px;
+  margin: 20px 0;
   color: var(--color-white);
 }
 .home button:hover {
@@ -189,7 +192,7 @@ header .logo a {
 
 /* About */
 .about {
-  height: 100vh;
+  min-height: 100vh;
   border-top: 1px solid var(--color-pink);
   text-align: center;
   padding: 50px;
@@ -326,5 +329,8 @@ header .logo a {
   .home .img-box {
     width: 300px;
     height: 400px;
+  }
+  .about-majors {
+    flex-wrap: wrap;
   }
 }
