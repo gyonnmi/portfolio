@@ -213,6 +213,8 @@ header .logo a {
 .about-majors {
   display: flex;
   justify-content: space-between;
+  width: 1000px;
+  margin: 80px auto;
 }
 .major {
   margin: 0 70px;
@@ -304,6 +306,14 @@ header .logo a {
 }
 
 
+/* Projects */
+#projects {
+  height: 100vh;
+  border-top: 1px solid var(--color-pink);
+  text-align: center;
+  padding: 50px;
+}
+
 
 /* Media Query */
 @media screen and (max-width: 768px) {
@@ -332,5 +342,11 @@ header .logo a {
   }
   .about-majors {
     flex-wrap: wrap;
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .major {
+    margin-bottom: 30px;
   }
 }
