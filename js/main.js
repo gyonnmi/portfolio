@@ -1,4 +1,5 @@
 /* main.js */
+'use strict';
 
 const toggleBtn = document.querySelector('.toggle-btn');
 const navbar = document.querySelector('.navbar');
@@ -12,3 +13,12 @@ toggleBtn.addEventListener('click', ()=> {
   }
 });
 
+const nav = document.querySelector('.nav');
+const navHeight = nav.getBoundingClientRect().height;
+document.addEventListener('scroll', ()=> {
+  if(window.scrollY > navHeight) {
+    nav.classList.add('nav-dark');
+  } else {
+    nav.classList.remove('nav-dark');
+  }
+})
