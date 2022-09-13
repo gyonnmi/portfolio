@@ -40,6 +40,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 ul, ol, li {
@@ -132,26 +133,26 @@ button {
 }
 
 /* Home */
-.home {
+#home {
   text-align: center;
   color: var(--color-white);
   padding-top: 100px;
 }
-.home .img-box {
+#home .img-box {
   width: 400px;
   margin: 0 auto;
 }
-.home .img-3d {
+#home .img-3d {
   position: relative;
   height: 400px;
   perspective: 600px;
 }
-.home .img-3d .front img,
-.home .img-3d .back img{
+#home .img-3d .front img,
+#home .img-3d .back img{
   backface-visibility: hidden;
   transition: 1s;
 }
-.home .img-3d .front img {
+#home .img-3d .front img {
   width: 250px;
   border-radius: 30%;
   border: 2px solid var(--color-pink);
@@ -162,10 +163,10 @@ button {
   margin-left: -125px;
 
 }
-.home .img-3d:hover .front img {
+#home .img-3d:hover .front img {
   transform: rotateY(180deg);
 }
-.home .img-3d .back img {
+#home .img-3d .back img {
   width: 400px;
   height: 300px;
   transform: rotateY(-180deg);
@@ -174,18 +175,18 @@ button {
   left: 50%;
   margin-left: -200px;
 }
-.home .img-3d:hover .back img {
+#home .img-3d:hover .back img {
   transform: rotateY(0deg);
 }
-.home h1 {
+#home h1 {
   letter-spacing: 2px;
 }
-.home p {
+#home p {
   letter-spacing: 2px;
   font-size: var(--font-medium);
   margin: 10px 0;
 }
-.home button {
+#home button {
   border-radius: var(--size-border-radius);
   font-size: var(--font-micro);
   border: 1px solid var(--color-white);
@@ -193,29 +194,29 @@ button {
   margin: 20px 0;
   color: var(--color-white);
 }
-.home button:hover {
+#home button:hover {
   background-color: var(--color-purple);
 }
 
 
 /* About */
-.about {
+#about {
   min-height: 100vh;
   border-top: 1px solid var(--color-pink);
   text-align: center;
   padding: 50px;
 }
-.about h1 {
+#about h1 {
   font-size: var(--font-large);
   margin-bottom: 24px;
   color: var(--color-dark-grey);
 }
-.about ul li {
+#about ul li {
   font-size: var(--font-small);
   line-height: 40px;
   color: var(--color-blue);
 }
-.about ul li span {
+#about ul li span {
   color: var(--color-pink);
 }
 .about-majors {
@@ -261,14 +262,14 @@ button {
 
 
 /* Skills */
-.skills {
+#skills {
   height: 100vh;
   border-top: 1px solid var(--color-pink);
   background-color: var(--color-yellow);
   text-align: center;
   padding: 50px;
 }
-.skills h1 {
+#skills h1 {
   font-size: var(--font-large);
   margin-bottom: 24px;
   color: var(--color-dark-grey);

@@ -13,6 +13,13 @@ toggleBtn.addEventListener('click', ()=> {
   }
 });
 
+navbar.addEventListener('click', ()=> {
+  const target = event.target;
+  const link = target.dataset.link;
+
+  document.querySelector(link).scrollIntoView();
+});
+
 const nav = document.querySelector('.nav');
 const navHeight = nav.getBoundingClientRect().height;
 document.addEventListener('scroll', ()=> {
@@ -22,3 +29,11 @@ document.addEventListener('scroll', ()=> {
     nav.classList.remove('nav-dark');
   }
 })
+
+const contactBtn = document.querySelector('.home-contact');
+contactBtn.addEventListener('click', ()=> {
+  const contact = document.querySelector('#contact');
+  contact.scrollIntoView();
+});
+
+
