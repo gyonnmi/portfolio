@@ -1,25 +1,20 @@
 /* main.js */
 'use strict';
 
-// 반응형 토글 버튼
-const toggleBtn = document.querySelector('.toggle-btn');
-const navbar = document.querySelector('.navbar');
-let navActive = false;
-toggleBtn.addEventListener('click', ()=> {
-  navActive = !navActive
-  if(navActive) {
-    navbar.classList.add('active');
-  } else {
-    navbar.classList.remove('active');
-  }
-});
-
 // Nav 스크롤 이동
-navbar.addEventListener('click', ()=> {
+const navbar = document.querySelector('.navbar');
+navbar.addEventListener('click', (event)=> {
   const target = event.target;
   const link = target.dataset.link;
 
+  navbar.classList.remove('open');
   document.querySelector(link).scrollIntoView();
+});
+
+// 반응형 토글 버튼
+const toggleBtn = document.querySelector('.toggle-btn');
+toggleBtn.addEventListener('click', ()=> {
+  navbar.classList.toggle('open');
 });
 
 // Nav Scroll Fixed
@@ -27,9 +22,9 @@ const nav = document.querySelector('.nav');
 const navHeight = nav.getBoundingClientRect().height;
 document.addEventListener('scroll', ()=> {
   if(window.scrollY > navHeight) {
-    nav.classList.add('nav-dark');
+    nav.classList.add('active');
   } else {
-    nav.classList.remove('nav-dark');
+    nav.classList.remove('active');
   }
 })
 
@@ -65,11 +60,18 @@ arrowUp.addEventListener('click', () => {
 const projectBtnContainer = document.querySelector('.project-menu');
 const projectContainer = document.querySelector('.my-project');
 const projects = document.querySelectorAll('.project');
-projectBtnContainer.addEventListener('click', (e) => {
+projectBtnContainer.addEventListener('click', e => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter == null) {
     return;
   }
+
+  const active = document.querySelector('.project-btn.selected');
+  active.classList.remove('selected');
+  const target = 
+    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
+
   projectContainer.classList.add('ani-out');
   setTimeout(() => {
     projects.forEach((project) => {
@@ -82,4 +84,5 @@ projectBtnContainer.addEventListener('click', (e) => {
     projectContainer.classList.remove('ani-out');
   }, 300)
 });
+
 

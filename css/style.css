@@ -81,16 +81,16 @@ button {
 .nav {
   margin-right: 50px;
   position: fixed;
-  width: 100%;
   height: 110px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--color-white);
-  z-index: 99;
+  z-index: 9;
   transition: all var(--animation-duration) ease-in-out;
+  width: 100%;
 }
-.nav.nav-dark {
+.nav.active {
   background-color: #F9CBC9;
 }
 .nav .logo {
@@ -114,11 +114,12 @@ button {
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
+  border: 1px solid transparent;
   border-radius: var(--size-border-radius);
   font-size: var(--font-small);
 }
-.nav ul li.active {
-  border: 1px solid var(--color-white);
+.nav ul li:last-child {
+  margin-right: 20px;
 }
 .nav ul li:hover {
   background-color: var(--color-pink);
@@ -130,6 +131,7 @@ button {
   font-size: 24px;
   color: var(--color-white);
   display: none;
+  z-index: 99;
 }
 
 /* Home */
@@ -336,12 +338,12 @@ button {
   padding: 8px 48px;
   font-size: var(--font-small);
 }
-.project-btn.active,
+.project-btn.selected,
 .project-btn:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
 }
-.project-btn.active .menu-count,
+.project-btn.selected .menu-count,
 .project-btn:hover .menu-count {
   opacity: 1;
   top: 0;
@@ -406,19 +408,22 @@ button {
   transition: all var(--animation-duration) ease-in;
 }
 .project:hover .project-description {
-  opacity: 0.7;
+  opacity: 0.8;
   transform: translateY(0px);
+}
+.project-description h3 {
+  color: var(--color-orange);
 }
 .project-description h3::after {
   content: '';
   display: block;
-  width: 40px;
+  width: 50px;
   height: 2px;
   background-color: var(--color-dark-white);
   position: relative;
   left: 50%;
-  margin-left: -20px;
   margin-top: 8px;
+  transform: translateX(-50%);
 }
 
 
@@ -482,15 +487,27 @@ button {
     align-items: flex-start;
   }
   .nav {
-    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #F9CBC9;
   }
-  .navbar.active {
+  .navbar {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #F9CBC9;
+  }
+  .navbar.open {
     display: block;
   }
   .nav ul {
     flex-direction: column;
     text-align: center;
     display: none;
+  }
+  .nav ul li {
+    margin: 4px !important;
   }
   .home .img-box {
     width: 300px;
