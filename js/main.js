@@ -93,7 +93,7 @@ const navItems = sectionIds.map(id =>
   document.querySelector(`[data-link="${id}"]`)
 );
 
-let selectedNavIndex;
+let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
 function selectNavItem(selected) {
   selectedNavItem.classList.remove('active');
@@ -127,7 +127,7 @@ sections.forEach(section => observer.observe(section));
 window.addEventListener('scroll', () => {
   if(window.scrollY === 0) {
     selectedNavIndex = 0;
-  } else if(window.scrollY + window.innerHeight === document.body.clientHeight) {
+  } else if(Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight) {
     selectedNavIndex = navItems.length - 1;
   }
   selectNavItem(navItems[selectedNavIndex]);
