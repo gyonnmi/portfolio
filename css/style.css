@@ -81,7 +81,6 @@ button {
 .nav {
   margin-right: 50px;
   position: fixed;
-  height: 110px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,6 +116,9 @@ button {
   border: 1px solid transparent;
   border-radius: var(--size-border-radius);
   font-size: var(--font-small);
+}
+.nav ul li.active {
+  border: 1px solid var(--color-white);
 }
 .nav ul li:last-child {
   margin-right: 20px;
@@ -206,7 +208,7 @@ button {
   min-height: 100vh;
   border-top: 1px solid var(--color-pink);
   text-align: center;
-  padding: 50px;
+  padding: 120px 50px 50px;
 }
 #about h1 {
   font-size: var(--font-large);
@@ -265,11 +267,11 @@ button {
 
 /* Skills */
 #skills {
-  height: 100vh;
+  min-height: 100vh;
   border-top: 1px solid var(--color-pink);
   background-color: var(--color-yellow);
   text-align: center;
-  padding: 50px;
+  padding: 120px 50px 50px;
 }
 #skills h1 {
   font-size: var(--font-large);
@@ -278,6 +280,7 @@ button {
 }
 .skill-box {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 50px;
   color: var(--color-dark-grey);
 }
@@ -322,21 +325,21 @@ button {
   min-height: 100vh;
   border-top: 1px solid var(--color-pink);
   text-align: center;
-  padding: 50px;
+  padding: 120px 50px 50px;
 }
 #projects h1 {
   font-size: var(--font-large);
-  margin-bottom: 24px;
   color: var(--color-dark-grey);
 }
 .project-menu {
-  margin: 48px;
+  margin: 28px;
 }
 .project-btn {
   border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-radius);
   padding: 8px 48px;
   font-size: var(--font-small);
+  position: relative;
 }
 .project-btn.selected,
 .project-btn:hover {
@@ -346,7 +349,7 @@ button {
 .project-btn.selected .menu-count,
 .project-btn:hover .menu-count {
   opacity: 1;
-  top: 0;
+  top: 7px;
 }
 .menu-count {
   background-color: var(--color-orange);
@@ -356,9 +359,9 @@ button {
   width: 24px;
   height: 24px;
   line-height: 24px;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 4px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
@@ -450,9 +453,9 @@ button {
 }
 .copyright {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  margin-left: -161px;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -150px;
 }
 
 /* Scroll */
@@ -478,10 +481,15 @@ button {
 
 /* Media Query */
 @media screen and (max-width: 768px) {
-  .toggle-btn {
-    display: block;
-    line-height: 110px;
-  }
+  :root {
+    /* Font size */
+      --font-large: 30px;
+      --font-medium: 18px;
+      --font-regular: 16px;
+      --font-small: 14px;
+      --font-micro: 12px;
+  }  
+
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -490,6 +498,18 @@ button {
     flex-direction: column;
     align-items: flex-start;
     background-color: #F9CBC9;
+  }
+  .nav.active {
+    padding: 7px;
+  }
+  .nav .logo img {
+    width: 50px;
+    height: 50px;
+    margin: 7px;
+  }
+  .nav .logo a {
+    line-height: 64px;
+    font-size: var(--font-medium);
   }
   .navbar {
     width: 100%;
@@ -509,17 +529,56 @@ button {
   .nav ul li {
     margin: 4px !important;
   }
-  .home .img-box {
+  .toggle-btn {
+    display: block;
+    line-height: 64px;
+  }
+  #home .img-box {
+    width: auto;
+  }
+  #home .img-3d {
+    height: 360px;
+  }
+  #home .img-box .front img {
+    width: 200px;
+    margin-left: -100px;
+  }
+  #home .img-box .back img {
     width: 300px;
-    height: 400px;
+    height: 200px;
+    margin-left: -150px;
+  }
+
+  
+  #about {
+    padding: 100px 16px 0;
   }
   .about-majors {
     flex-wrap: wrap;
     width: auto;
     display: flex;
     justify-content: center;
+    margin: 20px auto;
   }
   .major {
     margin-bottom: 30px;
+  }
+  .skill-box {
+    display: block;
+  }
+  .project-btn {
+    padding: 8px;
+    margin: 4px 0;
+    width: 100%;
+  }
+  .project-btn.selected .menu-count, 
+  .project-btn:hover .menu-count {
+    top: 5px;
+}
+  #skills, #projects {
+    padding-top: 100px;
+  }
+  .copyright {
+    margin-left: -125px;
   }
 }
