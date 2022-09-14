@@ -56,9 +56,30 @@ document.addEventListener('scroll', ()=> {
     arrowUp.classList.remove('visible');
   }
 });
-arrowUp.addEventListener('click', ()=> {
+arrowUp.addEventListener('click', () => {
   const home = document.querySelector('.home-container');
   home.scrollIntoView();
 });
 
+// 프로젝트 필터링
+const projectBtnContainer = document.querySelector('.project-menu');
+const projectContainer = document.querySelector('.my-project');
+const projects = document.querySelectorAll('.project');
+projectBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+  projectContainer.classList.add('ani-out');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if(filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('ani-out');
+  }, 300)
+});
 
