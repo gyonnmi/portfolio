@@ -1,318 +1,325 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kyungmi's Portfolio</title>
-  <meta name="description" content="Hello! I'm Kyungmi">
-  <meta name="author" content="Kyungmi">
-  <link rel="icon" type="image/png" href="img/1.png">
-  <script src="https://kit.fontawesome.com/df1c7ce5bc.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" 
-  rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyungmi's Portfolio</title>
+    <meta name="description" content="Hello! I'm Kyungmi" />
+    <meta name="author" content="Kyungmi" />
+    <link rel="icon" type="image/png" href="img/1.png" />
+    <script
+      src="https://kit.fontawesome.com/df1c7ce5bc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <script src="js/main.js" defer></script>
-</head>
-<body>
-  <div class="home-container">
-
-    <!-- Header -->
-    <header>
-      
-      <div class="nav">
-        <div class="logo">
-          <img src="./img/dev-logo.png" alt="logo">
-          <a href="#">Kyungmi's Portfolio</a>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="home-container">
+      <!-- Header -->
+      <header>
+        <div class="nav">
+          <div class="logo">
+            <img src="./img/dev-logo.png" alt="logo" />
+            <a href="#">Kyungmi's Portfolio</a>
+          </div>
+          <ul class="navbar">
+            <li class="active" data-link="#home">Home</li>
+            <li data-link="#about">About</li>
+            <li data-link="#skills">Skills</li>
+            <li data-link="#projects">Projects</li>
+            <li data-link="#contact">Contact</li>
+          </ul>
+          <button class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
-        <ul class="navbar">
-          <li class="active" data-link="#home">Home</li>
-          <li data-link="#about">About</li>
-          <li data-link="#skills">Skills</li>
-          <li data-link="#projects">Projects</li>
-          <li data-link="#contact">Contact</li>
-        </ul>
-        <button class="toggle-btn">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
+      </header>
 
-    </header>
-  
-    <!-- Home -->
-    <section id="home">
-      <div class="home-inner-container">
-        <div class="img-box">
-          <div class="img-3d">
-            <div class="front">
-              <img src="./img/m3.JPG" alt="" />
-            </div>
-            <div class="back">
-              <img src="./img/logo.png" alt="" />
+      <!-- Home -->
+      <section id="home">
+        <div class="home-inner-container">
+          <div class="img-box">
+            <div class="img-3d">
+              <div class="front">
+                <img src="./img/m3.JPG" alt="" />
+              </div>
+              <div class="back">
+                <img src="./img/logo.png" alt="" />
+              </div>
             </div>
           </div>
+          <h1>안녕하세요! 꾸준히 성장하는 개발자 구경미 입니다⭐</h1>
+          <p>💻 Front-end Developer 👩‍💼</p>
+          <button class="home-contact" data-link="#contact">Contact</button>
         </div>
-        <h1>안녕하세요! 꾸준히 성장하는 개발자 구경미 입니다⭐</h1>
-        <p>💻 Front-end Developer 👩‍💼</p>
-        <button class="home-contact" data-link="#contact">Contact</button>
+      </section>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+      <h1>About me</h1>
+      <ul>
+        <li>
+          🔸 <span>새로운 기술 스택</span>에 관심이 많고 배우는 걸 좋아합니다.
+        </li>
+        <li>
+          🔸 <span>React</span> 개발 환경에 관심이 많고 이를 활용해 개발하는
+          것에 <span>흥미</span>를 느낍니다.
+        </li>
+        <li>
+          🔸 <span>더 좋은 협업</span>에 대해 고민하고,
+          <span>더 좋은 코드 퀄리티</span>를 위해 노력하고 있습니다.
+        </li>
+        <li>
+          🔸 팀을 위해 해야할 일을 <span>스스로 찾고,</span> 팀에게
+          <span>도움이 되는 일</span>을 할 때 <span>뿌듯함</span>을 느낍니다.
+        </li>
+      </ul>
+      <div class="about-majors">
+        <div class="major">
+          <div class="major-icon">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <div class="major-title">Front-end</div>
+          <div class="major-description">
+            HTML, CSS, JavaScript, TypeScript, <br />
+            React, Next.js
+          </div>
+        </div>
+        <div class="major">
+          <div class="major-icon">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <div class="major-title">Back-end</div>
+          <div class="major-description">
+            Java, JavaScript, JSP / Servlet, <br />
+            Node.js, Oracle, Tomcat
+          </div>
+        </div>
       </div>
     </section>
 
-  </div>
-  
-  <!-- About -->
-  <section id="about">
-    <h1>About me</h1>
-    <ul>
-      <li>
-        🔸 <span>새로운 기술 스택</span>에 관심이 많고 배우는 걸 좋아합니다.
-      </li>
-      <li>
-        🔸 <span>React</span> 개발 환경에 관심이 많고
-        이를 활용해 개발하는 것에 <span>흥미</span>를 느낍니다. 
-      </li>
-      <li>
-        🔸 <span>더 좋은 협업</span>에 대해 고민하고, 
-        <span>더 좋은 코드 퀄리티</span>를 위해 노력하고 있습니다.
-      </li>
-      <li>
-        🔸 팀을 위해 해야할 일을 <span>스스로 찾고,</span>
-        팀에게 <span>도움이 되는 일</span>을 할 때 <span>뿌듯함</span>을 느낍니다.
-      </li>
-    </ul>
-    <div class="about-majors">
-      <div class="major">
-        <div class="major-icon">
-          <i class="fa-brands fa-html5"></i>
+    <!-- Skils -->
+    <section id="skills">
+      <h1>Skills</h1>
+      <p>
+        Git을 사용한 소스 코드 버전 관리를 할 수 있고, Github를 사용하여
+        프로젝트 관리를 할 수 있습니다. <br />
+        객체 지향 프로그래밍에 대해 이해하고 있습니다. <br />
+        SCR / CSR의 렌더링 방식에 대해 이해하고 있습니다.
+      </p>
+
+      <div class="skill-box">
+        <div class="skill-left">
+          <h2 class="skill-title">Skills</h2>
+
+          <div class="skill">
+            <div class="skill-description">
+              <span>HTML</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-value" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-description">
+              <span>CSS</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-value" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-description">
+              <span>JavaScript</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-value" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-description">
+              <span>TypeScript</span>
+              <span>50%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-value" style="width: 50%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-description">
+              <span>React</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-value" style="width: 70%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-description">
+              <span>Java</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-value" style="width: 70%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-description">
+              <span>JSP / Servlet</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-value" style="width: 70%"></div>
+            </div>
+          </div>
         </div>
-        <div class="major-title">
-          Front-end
-        </div>
-        <div class="major-description">
-          HTML, CSS, JavaScript, TypeScript, <br>
-          React, Bootstrap, Next.js
+        <div class="skill-right">
+          <div class="tools">
+            <h2 class="skill-title">Tools</h2>
+            <ul class="tools-list">
+              <li><span>Visual Studio Code</span></li>
+              <li><span>IntelliJ</span></li>
+              <li><span>Eclipse</span></li>
+              <li><span>Photoshop</span></li>
+            </ul>
+          </div>
+          <div class="etc">
+            <h2 class="skill-title">Etc</h2>
+            <ul class="etc-list">
+              <li><span>Git</span></li>
+              <li><span>Redux</span></li>
+              <li><span>Oracle</span></li>
+              <li><span>Bootstrap</span></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="major">
-        <div class="major-icon">
-          <i class="fa-solid fa-database"></i>
-        </div>
-        <div class="major-title">
-          Back-end
-        </div>
-        <div class="major-description">
-          Java, JavaScript, JSP / Servlet, <br>
-          Node.js, Oracle, Tomcat
-        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h1>Projects</h1>
+
+      <div class="project-menu">
+        <button class="project-btn selected" data-filter="*">
+          All <span class="menu-count">5</span>
+        </button>
+        <button class="project-btn" data-filter="front-end">
+          Front-end <span class="menu-count">3</span>
+        </button>
+        <button class="project-btn" data-filter="back-end">
+          Back-end <span class="menu-count">1</span>
+        </button>
       </div>
-    </div>
-  </section>
 
-  <!-- Skils -->
-  <section id="skills">
-    <h1>Skills</h1>
-    <p>
-      Git을 사용한 소스 코드 버전 관리를 할 수 있고, Github를 사용하여 프로젝트 관리를 할 수 있습니다. <br>
-      객체 지향 프로그래밍에 대해 이해하고 있습니다. <br>
-      SCR / CSR의 렌더링 방식에 대해 이해하고 있습니다.
-    </p>
+      <div class="my-project">
+        <a
+          href="https://github.com/gyonnmi/portfolio"
+          class="project"
+          target="blank"
+          data-type="front-end"
+        >
+          <img src="img/portfolio.png" alt="" class="project-img" />
+          <div class="project-description">
+            <h3>Portfolio Responsive Web Site</h3>
+            <span>HTML, CSS, JavaScript</span>
+          </div>
+        </a>
 
-    <div class="skill-box">
-      <div class="skill-left">
-        <h2 class="skill-title">Skills</h2>
+        <a
+          href="https://github.com/gyonnmi/starbucks"
+          class="project"
+          target="blank"
+          data-type="front-end"
+        >
+          <img src="img/macbook-starbucks.png" alt="" class="project-img" />
+          <div class="project-description">
+            <h3>Starbucks</h3>
+            <span>Clone coding with HTML, CSS, JavaScript</span>
+          </div>
+        </a>
 
-        <div class="skill">
-          <div class="skill-description">
-            <span>HTML</span>
-            <span>90%</span>
+        <a
+          href="https://github.com/gyonnmi/HackerNews"
+          class="project"
+          target="blank"
+          data-type="front-end"
+        >
+          <img src="img/macbook-hackerNews.png" alt="" class="project-img" />
+          <div class="project-description">
+            <h3>Hacker News</h3>
+            <span>Clone coding JavaScript and TypeScript</span>
           </div>
-          <div class="skill-bar">
-            <div class="skill-value" style="width: 90%;"></div>
-          </div>
-        </div>
+        </a>
 
-        <div class="skill">
-          <div class="skill-description">
-            <span>CSS</span>
-            <span>85%</span>
+        <a
+          href="https://github.com/gyonnmi/ExcelsiorCafe_KM"
+          class="project"
+          target="blank"
+          data-type="back-end"
+        >
+          <img src="img/macbook-excelcafe.png" alt="" class="project-img" />
+          <div class="project-description">
+            <h3>Excelsior Cafe</h3>
+            <span>Java, JSP / Servlet, Oracle DB, Tomcat</span>
           </div>
-          <div class="skill-bar">
-            <div class="skill-value" style="width: 85%;"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-description">
-            <span>JavaScript</span>
-            <span>70%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-value" style="width: 70%;"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-description">
-            <span>TypeScript</span>
-            <span>30%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-value" style="width: 30%;"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-description">
-            <span>React</span>
-            <span>60%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-value" style="width: 60%;"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-description">
-            <span>Java</span>
-            <span>70%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-value" style="width: 70%;"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-description">
-            <span>JSP / Servlet</span>
-            <span>70%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-value" style="width: 70%;"></div>
-          </div>
-        </div>
-
+        </a>
       </div>
-      <div class="skill-right">
-        <div class="tools">
-          <h2 class="skill-title">Tools</h2>
-          <ul class="tools-list">
-            <li><span>Visual Studio Code</span></li>
-            <li><span>IntelliJ</span></li>
-            <li><span>Eclipse</span></li>
-            <li><span>Photoshop</span></li>
-          </ul>
-        </div>
-        <div class="etc">
-          <h2 class="skill-title">Etc</h2>
-          <ul class="etc-list">
-            <li><span>Git</span></li>
-            <li><span>Redux</span></li>
-            <li><span>Oracle</span></li>
-            <li><span>Bootstrap</span></li>
-          </ul>
-        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h1>Contact</h1>
+
+      <div class="email">
+        <i class="fa-regular fa-envelope"></i>
+        <p>hikari980713@gmail.com</p>
       </div>
-    </div>
-  </section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h1>Projects</h1>
+      <div class="github">
+        <a href="https://github.com/gyonnmi">
+          <i class="fa-brands fa-github" style="color: #4d4d4d"></i>
+        </a>
+        <p>https://github.com/gyonnmi</p>
+      </div>
 
-    <div class="project-menu">
-      <button class="project-btn selected" data-filter="*">All <span class="menu-count">5</span></button>
-      <button class="project-btn" data-filter="front-end">Front-end <span class="menu-count">3</span></button>
-      <button class="project-btn" data-filter="back-end">Back-end <span class="menu-count">1</span></button>
-    </div>
+      <div class="blog">
+        <a href="https://km713.tistory.com/">
+          <i class="fa-solid fa-blog" style="color: #4d4d4d"></i>
+        </a>
+        <p>https://km713.tistory.com/</p>
+      </div>
+      <div class="copyright">
+        <p>Copyright 2022. Kyungmi All right reserved.</p>
+      </div>
+    </section>
 
-    <div class="my-project">
-
-      <a 
-        href="https://github.com/gyonnmi/portfolio" 
-        class="project"
-        target="blank"
-        data-type="front-end">
-        <img src="img/portfolio.png" alt="" class="project-img" />
-        <div class="project-description">
-          <h3>Portfolio Responsive Web Site</h3>
-          <span>HTML, CSS, JavaScript</span>
-        </div>
-      </a>
-
-      <a 
-        href="https://github.com/gyonnmi/starbucks" 
-        class="project"
-        target="blank"
-        data-type="front-end">
-        <img src="img/macbook-starbucks.png" alt="" class="project-img" />
-        <div class="project-description">
-          <h3>Starbucks</h3>
-          <span>Clone coding with HTML, CSS, JavaScript</span>
-        </div>
-      </a>
-
-      <a 
-        href="https://github.com/gyonnmi/HackerNews" 
-        class="project"
-        target="blank"
-        data-type="front-end">
-        <img src="img/macbook-hackerNews.png" alt="" class="project-img" />
-        <div class="project-description">
-          <h3>Hacker News</h3>
-          <span>Clone coding JavaScript and TypeScript</span>
-        </div>
-      </a>
-
-      <a 
-        href="https://github.com/gyonnmi/ExcelsiorCafe_KM" 
-        class="project"
-        target="blank"
-        data-type="back-end">
-        <img src="img/macbook-excelcafe.png" alt="" class="project-img" />
-        <div class="project-description">
-          <h3>Excelsior Cafe</h3>
-          <span>Java, JSP / Servlet, Oracle DB, Tomcat</span>
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h1>Contact</h1>
-
-    <div class="email">
-      <i class="fa-regular fa-envelope"></i>
-      <p>hikari980713@gmail.com</p>
-    </div>
-
-    <div class="github">
-      <a href="https://github.com/gyonnmi">
-        <i class="fa-brands fa-github" style="color: #4d4d4d"></i>
-      </a>
-      <p>https://github.com/gyonnmi</p>
-    </div>
-
-    <div class="blog">
-      <a href="https://km713.tistory.com/">
-        <i class="fa-solid fa-blog" style="color: #4d4d4d"></i>
-      </a>
-      <p>https://km713.tistory.com/</p>
-    </div>
-    <div class="copyright">
-      <p>Copyright 2022. Kyungmi All right reserved.</p>
-    </div>
-  </section>
-
-  <!-- Arrow up -->
-  <button class="arrow-up">
-    <i class="fa-solid fa-circle-up"></i>
-  </button>
-
-</body>
+    <!-- Arrow up -->
+    <button class="arrow-up">
+      <i class="fa-solid fa-circle-up"></i>
+    </button>
+  </body>
 </html>
