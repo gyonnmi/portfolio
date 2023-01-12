@@ -5,14 +5,14 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-pink: #F58DA6;
+  --color-pink: #f58da6;
   --color-dark-pink: #fd8f8b;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-blue: #60B3F7;
+  --color-blue: #60b3f7;
   --color-yellow: #fff7d1;
-  --color-orange: #E88B4A;
+  --color-orange: #e88b4a;
   --color-black: #000000;
   --color-purple: #bdbdf7;
 
@@ -33,7 +33,6 @@
 
   /* Animation */
   --animation-duration: 300ms;
-
 }
 
 * {
@@ -43,7 +42,9 @@
   scroll-behavior: smooth;
 }
 
-ul, ol, li {
+ul,
+ol,
+li {
   list-style: none;
 }
 
@@ -54,7 +55,7 @@ a {
 
 body {
   cursor: default;
-  font-family: 'Poor Story', cursive;
+  font-family: "Poor Story", cursive;
   letter-spacing: 1px;
 }
 
@@ -63,10 +64,9 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
-  font-family: 'Poor Story', cursive;
+  font-family: "Poor Story", cursive;
   letter-spacing: 1px;
 }
-
 
 /* Home-Container */
 .home-container {
@@ -75,7 +75,6 @@ button {
   background-position-y: bottom;
   min-height: 100vh;
 }
-
 
 /* Header */
 .nav {
@@ -90,7 +89,7 @@ button {
   width: 100%;
 }
 .nav.active {
-  background-color: #F9CBC9;
+  background-color: #f9cbc9;
 }
 .nav .logo {
   display: flex;
@@ -152,7 +151,7 @@ button {
   perspective: 600px;
 }
 #home .img-3d .front img,
-#home .img-3d .back img{
+#home .img-3d .back img {
   backface-visibility: hidden;
   transition: 1s;
 }
@@ -165,7 +164,6 @@ button {
   transform: rotateY(0deg);
   left: 50%;
   margin-left: -125px;
-
 }
 #home .img-3d:hover .front img {
   transform: rotateY(180deg);
@@ -202,7 +200,6 @@ button {
   background-color: var(--color-purple);
 }
 
-
 /* About */
 #about {
   min-height: 100vh;
@@ -226,7 +223,6 @@ button {
 .about-majors {
   display: flex;
   justify-content: space-between;
-  width: 1000px;
   margin: 80px auto;
 }
 .major {
@@ -253,7 +249,6 @@ button {
 .major-title,
 .major-description {
   color: var(--color-dark-grey);
-  
 }
 .major-title {
   font-size: var(--font-medium);
@@ -263,7 +258,6 @@ button {
 .major-description {
   font-size: var(--font-small);
 }
-
 
 /* Skills */
 #skills {
@@ -318,7 +312,6 @@ button {
 .skill-right .etc {
   background-color: #b9dfff;
 }
-
 
 /* Projects */
 #projects {
@@ -418,7 +411,7 @@ button {
   color: var(--color-orange);
 }
 .project-description h3::after {
-  content: '';
+  content: "";
   display: block;
   width: 50px;
   height: 2px;
@@ -428,7 +421,6 @@ button {
   margin-top: 8px;
   transform: translateX(-50%);
 }
-
 
 /* Contact */
 #contact {
@@ -453,9 +445,9 @@ button {
 }
 .copyright {
   position: absolute;
-    bottom: 10px;
-    left: 50%;
-    margin-left: -150px;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -150px;
 }
 
 /* Scroll */
@@ -475,20 +467,16 @@ button {
   pointer-events: auto;
 }
 
-
-
-
-
 /* Media Query */
 @media screen and (max-width: 768px) {
   :root {
     /* Font size */
-      --font-large: 30px;
-      --font-medium: 18px;
-      --font-regular: 16px;
-      --font-small: 14px;
-      --font-micro: 12px;
-  }  
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
 
   header {
     flex-direction: column;
@@ -497,7 +485,7 @@ button {
   .nav {
     flex-direction: column;
     align-items: flex-start;
-    background-color: #F9CBC9;
+    background-color: #f9cbc9;
   }
   .nav.active {
     padding: 7px;
@@ -516,7 +504,7 @@ button {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #F9CBC9;
+    background-color: #f9cbc9;
   }
   .navbar.open {
     display: block;
@@ -549,7 +537,6 @@ button {
     margin-left: -150px;
   }
 
-  
   #about {
     padding: 100px 16px 0;
   }
@@ -571,11 +558,12 @@ button {
     margin: 4px 0;
     width: 100%;
   }
-  .project-btn.selected .menu-count, 
+  .project-btn.selected .menu-count,
   .project-btn:hover .menu-count {
     top: 5px;
-}
-  #skills, #projects {
+  }
+  #skills,
+  #projects {
     padding-top: 100px;
   }
   .copyright {
